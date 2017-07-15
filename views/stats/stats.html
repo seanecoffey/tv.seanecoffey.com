@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Netdata Simple Dash</title>
+  <meta name="application-name" content="netdata">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:image" content="http://tv.seanecoffey.com/images/play.gif" />
+  <meta property="og:url" content="http://tv.seanecoffey.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="netdata" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+
+</head>
+
+<!-- netdata scripts-->
+<script>
+  var netdataTheme = 'slate';
+</script>
+<script type="text/javascript" src="http://tv.seanecoffey.com/netdata/dashboard.js"></script>
+<!-- netdata options-->
+<script>
+  NETDATA.options.current.destroy_on_hide = true;
+  NETDATA.options.current.eliminate_zero_dimensions = true;
+  NETDATA.options.current.concurrent_refreshes = false;
+  NETDATA.options.current.parallel_refresher = true;
+  NETDATA.options.current.stop_updates_when_focus_is_lost = false;
+
+  var RELOAD_EVERY = 5; //minutes
+  setTimeout(function() {
+    location.reload();
+  }, RELOAD_EVERY * 60 * 1000);
+</script>
+
+<body>
+  <div role="sectionhead">
+    <h1 id="menu_system" role="heading">System Overview</h1></div>
+  <div style="width: 100%; text-align: center; display: inline-block;">
+    <div style="width: 100%; height:100%; align: center; display: inline-block;">
+      <div style="width: 100%; height: 24vh; text-align: center; display: inline-block; margin-bottom:50px;">
+        <div class="netdata-container-easypiechart" style="margin-right: 10px; width: 11%;" data-netdata="system.io" data-dimensions="in" data-chart-library="easypiechart" data-title="Disk Read" data-width="11%" data-before="0" data-after="-540" data-points="540"
+          role="application">
+          <div class="netdata-message icon hidden" style="font-size: 16.7px; padding-top: 73.15px;"><i class="fa fa-refresh"></i>netdata</div>
+          <div id="easypiechart-b855a6b7-1ea7-a7f7-0cae-8b82e5cc28d6-chart" class=" netdata-chart netdata-easypiechart-chart">
+            <span class="easyPieChartLabel" style="font-size: 22px; top: 70px;">0</span>
+            <span class="easyPieChartTitle" style="font-size: 12px; line-height: 12px; top: 42px;">Disk Read</span>
+            <span class="easyPieChartUnits" style="font-size: 11px; top: 107px;">kilobytes/s</span>
+            <canvas height="167" width="167"></canvas>
+          </div>
+        </div>
+        <div class="netdata-container-easypiechart" style="margin-right: 10px; width: 11%;" data-netdata="system.io" data-dimensions="out" data-chart-library="easypiechart" data-title="Disk Write" data-width="11%" data-before="0" data-after="-540" data-points="540"
+          role="application">
+          <div class="netdata-message icon hidden" style="font-size: 16.8px; padding-top: 73.1px;"><i class="fa fa-refresh"></i> netdata</div>
+          <div id="easypiechart-a11f9b13-ab31-4f06-ac4b-1dd5f72d5ae2-chart" class=" netdata-chart netdata-easypiechart-chart">
+            <span class="easyPieChartLabel" style="font-size: 22px; top: 71px;">0</span>
+            <span class="easyPieChartTitle" style="font-size: 12px; line-height: 12px; top: 43px;">Disk Write</span>
+            <span class="easyPieChartUnits" style="font-size: 11px; top: 108px;">kilobytes/s</span>
+            <canvas height="168" width="168"></canvas>
+          </div>
+        </div>
+        <div class="netdata-container-gauge" style="margin-right: 10px; width: 20%;" data-netdata="system.cpu" data-chart-library="gauge" data-title="CPU Usage" data-units="%" data-gauge-max-value="100" data-width="20%" data-after="-540" data-points="540" data-colors="#22AA99"
+          role="application">
+          <div id="gauge-852cd0f5-915a-6c52-3db2-b88f0de2cfd6-chart" class=" netdata-chart netdata-gauge-chart">
+            <canvas id="gauge-852cd0f5-915a-6c52-3db2-b88f0de2cfd6-canvas" class="gaugeChart" width="304" height="183"></canvas>
+            <span class="gaugeChartLabel" style="font-size: 36px; top: 46px;">5.05</span>
+            <span class="gaugeChartTitle" style="font-size: 17px; line-height: 17px; top: 0px;">CPU Usage</span>
+            <span class="gaugeChartUnits" style="font-size: 15px;">%</span>
+            <span class="gaugeChartMin" style="font-size: 27px;">0</span>
+            <span class="gaugeChartMax" style="font-size: 27px;">100</span>
+          </div>
+        </div>
+        <div class="netdata-container-easypiechart" style="margin-right: 10px; width: 11%;" data-netdata="system.ipv4" data-dimensions="received" data-chart-library="easypiechart" data-title="Traffic Inbound" data-width="11%" data-before="0" data-after="-540"
+          data-points="540" role="application">
+          <div class="netdata-message icon hidden" style="font-size: 16.8px; padding-top: 73.1px;"><i class="fa fa-refresh"></i> netdata</div>
+          <div id="easypiechart-d7ccd04b-79e6-c103-5c7d-64e33767919b-chart" class=" netdata-chart netdata-easypiechart-chart">
+            <span class="easyPieChartLabel" style="font-size: 22px; top: 71px;">764.1</span>
+            <span class="easyPieChartTitle" style="font-size: 12px; line-height: 12px; top: 43px;">Inbound Traffic</span>
+            <span class="easyPieChartUnits" style="font-size: 11px; top: 108px;">kilobits/s</span>
+            <canvas height="168" width="168"></canvas></div>
+        </div>
+        <div class="netdata-container-easypiechart" style="margin-right: 10px; width: 11%;" data-netdata="system.ipv4" data-dimensions="sent" data-chart-library="easypiechart" data-title="Traffic Outbound" data-width="11%" data-before="0" data-after="-540" data-points="540"
+          role="application">
+          <div class="netdata-message icon hidden" style="font-size: 16.7px; padding-top: 73.15px;"><i class="fa fa-refresh"></i> netdata</div>
+          <div id="easypiechart-2a743fce-1a6e-5ef2-e397-cbcf80acc92a-chart" class=" netdata-chart netdata-easypiechart-chart">
+            <span class="easyPieChartLabel" style="font-size: 22px; top: 70px;">649.6</span>
+            <span class="easyPieChartTitle" style="font-size: 12px; line-height: 12px; top: 42px;">Outbound Traffic</span>
+            <span class="easyPieChartUnits" style="font-size: 11px; top: 107px;">kilobits/s</span>
+            <canvas height="167" width="167"></canvas></div>
+        </div>
+        <div class="netdata-container-easypiechart" style="margin-right: 10px; width: 9%;" data-netdata="system.ram" data-dimensions="used|buffers|active|wired" data-append-options="percentage" data-chart-library="easypiechart" data-title="Used RAM" data-units="%"
+          data-easypiechart-max-value="100" data-width="9%" data-after="-540" data-points="540" data-colors="#EE9911" role="application">
+          <div class="netdata-message icon hidden" style="font-size: 13.7px; padding-top: 59.15px;"><i class="fa fa-refresh"></i> netdata</div>
+          <div id="easypiechart-21c9e675-f570-284d-eb19-9a04ec4a748e-chart" class=" netdata-chart netdata-easypiechart-chart">
+            <span class="easyPieChartLabel" style="font-size: 18px; top: 58px;">62.7</span>
+            <span class="easyPieChartTitle" style="font-size: 10px; line-height: 10px; top: 35px;">Used RAM</span>
+            <span class="easyPieChartUnits" style="font-size: 9px; top: 88px;">%</span>
+            <canvas height="137" width="137"></canvas>
+          </div>
+        </div>
+      </div>
+      <div style="width: 100%; height: 24vh; text-align: center; display: inline-block; margin-bottom:20px;">
+        <div data-netdata="system.cpu" data-title="CPU usage" data-chart-library="dygraph" data-width="49%" data-height="100%" data-after="-300" data-dygraph-valuerange="[0, 100]" class="netdata-container-with-legend"></div>
+        <div data-netdata="system.ram" data-title="RAM Usage" data-chart-library="dygraph" data-width="49%" data-height="100%" data-after="-300" class="netdata-container-with-legend"></div>
+      </div>
+      <div style="width: 100%; height: 24vh; text-align: center; display: inline-block; margin-bottom:20px;">
+        <div data-netdata="system.ipv4" data-title="Network Traffic" data-chart-library="dygraph" data-width="49%" data-height="100%" data-after="-300" class="netdata-container-with-legend"></div>
+        <div data-netdata="system.io" data-title="Disk Usage" data-chart-library="dygraph" data-width="49%" data-height="100%" data-after="-300" class="netdata-container-with-legend"></div>
+      </div>
+    </div>
+  </div>
+</body>
+<html>
