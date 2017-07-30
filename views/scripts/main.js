@@ -59,8 +59,8 @@ function succesfulSubmit() {
     timeout: 5000
   };
   snackbarContainer.MaterialSnackbar.showSnackbar(data);
-  document.querySelector('#Requests').style.display = 'none';
-  document.querySelector('#success').style.display = 'block';
+  document.querySelector('#Requests').style.display='none';
+  document.querySelector('#success').style.display='block';
 };
 
 function processForm(e) {

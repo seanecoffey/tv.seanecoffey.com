@@ -263,6 +263,21 @@ html, body {
   background: url('../images/deluge.png') center / cover;
 }
 
+.donate-circle {
+  background-color: #fff!important;
+  background: url('../images/confused.jpg') center / cover;
+}
+
+.donorbox-circle {
+  background-color: #fff!important;
+  background: url('../images/donate.png') center / cover;
+}
+
+.paypal-circle {
+  background-color: #fff!important;
+  background: url('../images/paypal.png') center / cover;
+}
+
 .extra-whitespace {
   height:10px;
 }
